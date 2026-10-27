@@ -66,7 +66,7 @@
 
   <!-- Hero Section -->
   <section class="hero">
-    <canvas id="heroBgCanvas" class="hero-bg-canvas"></canvas>
+    <img src="assets/project-pool-paleokastritsa.jpg" alt="" class="hero-bg-photo" />
     <div class="hero-overlay"></div>
     <div class="container hero-grid">
       <div class="hero-content">
@@ -107,8 +107,8 @@
 
       <div class="hero-showcase-card">
         <div class="hero-showcase-img-wrap">
-          <img src="assets/project-pool-paleokastritsa.jpg" alt="Σταμπωτό δάπεδο γύρω από πισίνα στην Κέρκυρα - Νίκος Λαμπρόπουλος" />
-          <div class="hero-img-tag">Κερκυραϊκή Πλάκα & Πισίνα • Παλαιοκαστρίτσα</div>
+          <img src="assets/hero-corfu-villa-pool.jpg" alt="Πραγματικό Έργο Σταμπωτού Δαπέδου & Πισίνας σε Βίλα στην Κέρκυρα - Νίκος Λαμπρόπουλος" />
+          <div class="hero-img-tag">Πραγματικό Έργο • Κερκυραϊκή Βίλα & Πισίνα</div>
         </div>
         <div class="hero-card-features">
           <div class="hero-mini-feat">
@@ -204,13 +204,13 @@
             <div class="service-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M4 21V7l8-4 8 4v14"/><path d="M4 12h16"/><path d="M12 3v18"/></svg>
             </div>
-            <h3 class="service-title">Σταμπωτοί Τοίχοι & Τεχνητοί Βράχοι</h3>
+            <h3 class="service-title">Πατητή Τσιμεντοκονία & Σταμπωτοί Τοίχοι</h3>
             <p class="service-text">
-              Κάθετες εφαρμογές σταμπωτού κονιάματος για επενδύσεις τοιχίων, μάντρες, πεζούλια και διαμόρφωση τεχνητών βράχων σε πισίνες και κήπους.
+              Κάθετες και οριζόντιες εφαρμογές πατητής τσιμεντοκονίας και σταμπωτού κονιάματος για επενδύσεις τοιχίων, μπάνια, κήπους και περιβάλλοντες χώρους.
             </p>
           </div>
           <ul class="service-bullets">
-            <li>Όψη φυσικής ξερολιθιάς ή λαξευτής πέτρας</li>
+            <li>Αδιάβροχη μονολιθική επιφάνεια υψηλής αισθητικής</li>
             <li>Προστασία τοιχοποιίας από την υγρασία της Κέρκυρας</li>
             <li>Εξατομικευμένος χρωματισμός στο χέρι</li>
           </ul>
@@ -262,7 +262,7 @@
         <span class="section-tag">Διαδραστικός Δειγματολόγος</span>
         <h2 class="section-title">Επιλέξτε Σχέδιο Καλουπιού & Χρωματική Παλέτα</h2>
         <p class="section-desc">
-          Δοκιμάστε σε πραγματικό χρόνο τους πιο δημοφιλείς συνδυασμούς σταμπωτών δαπέδων μας στην Κέρκυρα και δείτε τις τεχνικές προδιαγραφές κάθε επιλογής.
+          Δείτε πραγματικές φωτογραφίες εφαρμογών μας για κάθε σχέδιο σταμπωτού δαπέδου και επιλέξτε την απόχρωση σκληρυντή που ταιριάζει στον χώρο σας.
         </p>
       </div>
 
@@ -280,10 +280,10 @@
               </button>
               <button type="button" class="pattern-btn" data-pattern="cobblestone">
                 <span class="pattern-btn-name">Κυβόλιθος</span>
-                <span class="pattern-btn-sub">Ιδανικό για Ράμπες & Εισόδους</span>
+                <span class="pattern-btn-sub">Ιδανικό για Ράμπες & Καντούνια</span>
               </button>
               <button type="button" class="pattern-btn" data-pattern="european_fan">
-                <span class="pattern-btn-name">Βεντάλια Ευρωπαϊκή</span>
+                <span class="pattern-btn-name">Βεντάλια / Διάδρομος</span>
                 <span class="pattern-btn-sub">Αρχοντικά & Ξενοδοχεία</span>
               </button>
               <button type="button" class="pattern-btn" data-pattern="random_stone">
@@ -343,12 +343,15 @@
           </div>
         </div>
 
-        <!-- Live Preview Canvas & Specs -->
+        <!-- Live Photographic Preview & Specs -->
         <div class="customizer-preview-pane">
           <div class="canvas-stage">
-            <canvas id="stampPreviewCanvas" width="640" height="480"></canvas>
-            <div class="canvas-badge-overlay" id="canvasBadgeOverlay">
-              Κερκυραϊκή Πλάκα • Τερακότα Κέρκυρας
+            <img id="customizerPreviewImg" src="assets/project-villa-kassiopi.jpg" alt="Πραγματική Φωτογραφία Σταμπωτού Δαπέδου" style="width:100%;height:100%;object-fit:cover;transition:filter 0.35s ease;" />
+            <div id="customizerTintOverlay" style="position:absolute;inset:0;mix-blend-mode:multiply;pointer-events:none;transition:background 0.35s ease;"></div>
+            <div id="customizerGlossOverlay" style="position:absolute;inset:0;pointer-events:none;transition:background 0.35s ease;"></div>
+            <div class="canvas-badge-overlay" style="display:flex;align-items:center;gap:9px;">
+              <span id="customizerSwatchChip" style="width:16px;height:16px;border-radius:50%;background:#BC664A;border:2px solid #FFF;display:inline-block;flex-shrink:0;"></span>
+              <span id="canvasBadgeOverlay">Κερκυραϊκή Πλάκα • Τερακότα Κέρκυρας</span>
             </div>
           </div>
 
@@ -499,37 +502,37 @@
   <section class="section section-alt" id="projects">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Δείγματα Εργασιών</span>
-        <h2 class="section-title">Εφαρμογές & Έργα μας στην Κέρκυρα</h2>
+        <span class="section-tag">Πραγματικά Έργα & Εφαρμογές</span>
+        <h2 class="section-title">Φωτογραφίες Έργων μας στην Κέρκυρα</h2>
         <p class="section-desc">
-          Ανακαλύψτε αντιπροσωπευτικές εφαρμογές σταμπωτών δαπέδων και περιβάλλοντος χώρου πισίνας σε βίλες, τουριστικά καταλύματα και κατοικίες σε όλο το νησί.
+          Αληθινές φωτογραφίες από ολοκληρωμένες κατασκευές σταμπωτών δαπέδων, πισίνας και διαμόρφωσης εξωτερικών χώρων σε βίλες, ξενοδοχεία και κατοικίες στην Κέρκυρα.
         </p>
       </div>
 
       <div class="gallery-filters">
-        <button type="button" class="filter-btn active" data-filter="all">Όλα τα Έργα</button>
+        <button type="button" class="filter-btn active" data-filter="all">Όλα τα Έργα (9)</button>
         <button type="button" class="filter-btn" data-filter="villas">Βίλες & Κατοικίες</button>
-        <button type="button" class="filter-btn" data-filter="pools">Περιβάλλοντες Χώροι Πισίνας</button>
-        <button type="button" class="filter-btn" data-filter="hotels">Ξενοδοχεία & Καταλύματα</button>
-        <button type="button" class="filter-btn" data-filter="ramps">Ράμπες & Parking</button>
+        <button type="button" class="filter-btn" data-filter="pools">Πισίνες & Περιβάλλων Χώρος</button>
+        <button type="button" class="filter-btn" data-filter="hotels">Ξενοδοχεία & Επαγγελματικοί Χώροι</button>
+        <button type="button" class="filter-btn" data-filter="ramps">Διάδρομοι, Καντούνια & Ράμπες</button>
       </div>
 
       <div class="gallery-grid">
         <!-- Project 1 -->
-        <article class="project-card" data-category="villas">
+        <article class="project-card" data-category="pools">
           <div class="project-img-box">
-            <img src="assets/project-villa-kassiopi.jpg" alt="Σταμπωτό Δάπεδο σε Βίλα στην Κασσιόπη Κέρκυρας" />
-            <span class="project-loc-badge">📍 Κασσιόπη, Βόρεια Κέρκυρα</span>
+            <img src="assets/hero-corfu-villa-pool.jpg" alt="Κατασκευή Πισίνας και Σταμπωτού Δαπέδου σε Κερκυραϊκή Βίλα" />
+            <span class="project-loc-badge">📍 Άνω Κορακιάνα & Δασιά</span>
           </div>
           <div class="project-body">
-            <div class="project-cat">Βίλες & Κατοικίες</div>
-            <h3 class="project-title">Παραδοσιακή Αυλή Βίλας με Κερκυραϊκή Πλάκα</h3>
+            <div class="project-cat">Πισίνες & Βίλες</div>
+            <h3 class="project-title">Συγκρότημα Κερκυραϊκών Βιλών με Πισίνα & Σταμπωτό</h3>
             <p class="project-desc">
-              Εφαρμογή σταμπωτού δαπέδου σε απόχρωση Τερακότα Κέρκυρας με διπλή αντιηλιακή σφράγιση για απόλυτη εναρμόνιση με την επτανησιακή αρχιτεκτονική.
+              Ολοκληρωμένη κατασκευή πισίνας και περιμετρικού σταμπωτού δαπέδου σε ανοιχτή απόχρωση Άμμου Ιονίου που παραμένει δροσερή κάτω από τον ήλιο.
             </p>
             <div class="project-meta">
-              <span>Σχέδιο: Κερκυραϊκή Πλάκα</span>
-              <span>Επιφάνεια: 210 m²</span>
+              <span>Εφαρμογή: Πισίνα & Περιβάλλων Χώρος</span>
+              <span>Επιφάνεια: 280 m²</span>
             </div>
           </div>
         </article>
@@ -537,37 +540,37 @@
         <!-- Project 2 -->
         <article class="project-card" data-category="pools">
           <div class="project-img-box">
-            <img src="assets/project-pool-paleokastritsa.jpg" alt="Περιβάλλων Χώρος Πισίνας στην Παλαιοκαστρίτσα" />
+            <img src="assets/project-pool-paleokastritsa.jpg" alt="Περιβάλλων Χώρος Πισίνας στην Παλαιοκαστρίτσα Κέρκυρας" />
             <span class="project-loc-badge">📍 Παλαιοκαστρίτσα</span>
           </div>
           <div class="project-body">
             <div class="project-cat">Περιβάλλοντες Χώροι Πισίνας</div>
-            <h3 class="project-title">Κατασκευή Πισίνας & Αντιολισθηρό Deck Άμμου</h3>
+            <h3 class="project-title">Αντιολισθηρό Deck Πισίνας & Πέτρινο Μονοπάτι</h3>
             <p class="project-desc">
-              Ολοκληρωμένη διαμόρφωση πισίνας και περιμετρικού σταμπωτού δαπέδου σε ψυχρή απόχρωση Άμμος Ιονίου που δεν καίει κάτω από τον καλοκαιρινό ήλιο.
+              Συνδυασμός μονολιθικού αντιολισθηρού σταμπωτού δαπέδου γύρω από την πισίνα με παραδοσιακή πλακόστρωση στον κήπο της βίλας.
             </p>
             <div class="project-meta">
-              <span>Σχέδιο: Ακανόνιστη Πέτρα</span>
-              <span>Επιφάνεια: 165 m²</span>
+              <span>Σχέδιο: Κερκυραϊκή Πλάκα & Πέτρα</span>
+              <span>Επιφάνεια: 220 m²</span>
             </div>
           </div>
         </article>
 
         <!-- Project 3 -->
-        <article class="project-card" data-category="hotels">
+        <article class="project-card" data-category="villas">
           <div class="project-img-box">
-            <img src="assets/project-hotel-kommeno.jpg" alt="Ξενοδοχειακό Συγκρότημα στο Κομμένο Κέρκυρας" />
-            <span class="project-loc-badge">📍 Κομμένο & Δασιά</span>
+            <img src="assets/project-villa-kassiopi.jpg" alt="Σταμπωτό Δάπεδο με Μπορντούρα Τερακότα στην Κασσιόπη" />
+            <span class="project-loc-badge">📍 Κασσιόπη, Βόρεια Κέρκυρα</span>
           </div>
           <div class="project-body">
-            <div class="project-cat">Ξενοδοχεία & Τουριστικά Καταλύματα</div>
-            <h3 class="project-title">Διάδρομοι & Αίθριο Boutique Resort</h3>
+            <div class="project-cat">Βίλες & Επαγγελματικοί Χώροι</div>
+            <h3 class="project-title">Δίχρωμο Σταμπωτό Δάπεδο με Μπορντούρα Τερακότα</h3>
             <p class="project-desc">
-              Μονολιθικό σταμπωτό δάπεδο υψηλής αντοχής για συνεχή διέλευση επισκεπτών, μηδενική ανάγκη συντήρησης και άψογη αισθητική.
+              Αρχιτεκτονικός συνδυασμός σταμπωτού ψαροκόκαλου πέτρας με διακοσμητικές ζώνες σε απόχρωση Τερακότα Κέρκυρας και αντιηλιακό βερνίκι.
             </p>
             <div class="project-meta">
-              <span>Σχέδιο: Σχιστόλιθος Γκρι</span>
-              <span>Επιφάνεια: 480 m²</span>
+              <span>Σχέδιο: Πέτρα & Ζώνες Τερακότα</span>
+              <span>Επιφάνεια: 210 m²</span>
             </div>
           </div>
         </article>
@@ -575,37 +578,37 @@
         <!-- Project 4 -->
         <article class="project-card" data-category="ramps">
           <div class="project-img-box">
-            <img src="assets/project-ramp-korakiana.jpg" alt="Ράμπα & Χώρος Στάθμευσης στην Άνω Κορακιάνα" />
+            <img src="assets/project-ramp-korakiana.jpg" alt="Διάδρομος και Ράμπα Σταμπωτού Δαπέδου στην Κέρκυρα" />
             <span class="project-loc-badge">📍 Άνω Κορακιάνα</span>
           </div>
           <div class="project-body">
-            <div class="project-cat">Ράμπες & Χώροι Στάθμευσης</div>
-            <h3 class="project-title">Αντιολισθηρή Ράμπα Υψηλής Κλίσης & Parking</h3>
+            <div class="project-cat">Διάδρομοι & Ράμπες</div>
+            <h3 class="project-title">Εξωτερικός Διάδρομος & Ράμπα σε Γήινη Τερακότα</h3>
             <p class="project-desc">
-              Ενισχυμένο δάπεδο με χαλύβδινο πλέγμα και βαθύ ανάγλυφο Βεντάλιας σε Ανθρακί τόνο για μέγιστη πρόσφυση ελαστικών στη βροχή.
+              Ενισχυμένο δάπεδο με αρμούς διαστολής και αντιολισθηρή υφή, πλαισιωμένο από παραδοσιακή πέτρινη τοιχοποιία.
             </p>
             <div class="project-meta">
-              <span>Σχέδιο: Ευρωπαϊκή Βεντάλια</span>
-              <span>Επιφάνεια: 190 m²</span>
+              <span>Απόχρωση: Καφέ Γης / Τερακότα</span>
+              <span>Επιφάνεια: 175 m²</span>
             </div>
           </div>
         </article>
 
         <!-- Project 5 -->
-        <article class="project-card" data-category="pools">
+        <article class="project-card" data-category="ramps">
           <div class="project-img-box">
-            <img src="assets/project-wood-sidari.jpg" alt="Σταμπωτό Ξύλινη Σανίδα γύρω από πισίνα στο Σιδάρι" />
-            <span class="project-loc-badge">📍 Σιδάρι & Αχαράβη</span>
+            <img src="assets/project-cobble-corfu-town.jpg" alt="Σταμπωτό Καντούνι & Πλακόστρωτο στην Κέρκυρα" />
+            <span class="project-loc-badge">📍 Παραδοσιακός Οικισμός</span>
           </div>
           <div class="project-body">
-            <div class="project-cat">Περιβάλλοντες Χώροι Πισίνας</div>
-            <h3 class="project-title">Σταμπωτό Deck Ξύλινης Σανίδας σε Τουριστική Βίλα</h3>
+            <div class="project-cat">Καντούνια & Παραδοσιακοί Οικισμοί</div>
+            <h3 class="project-title">Ανάπλαση Παραδοσιακού Δρόμου με Σταμπωτή Πέτρα</h3>
             <p class="project-desc">
-              Όλη η φυσική γοητεία του ξύλινου deck γύρω από την πισίνα, με την αιώνια αντοχή του οπλισμένου σκυροδέματος.
+              Αποτύπωση παραδοσιακού πλακόστρωτου και κυβόλιθου με κανάλια απορροής ομβρίων υδάτων, απόλυτα εναρμονισμένο με την τοπική αρχιτεκτονική.
             </p>
             <div class="project-meta">
-              <span>Σχέδιο: Ξύλινη Σανίδα</span>
-              <span>Επιφάνεια: 140 m²</span>
+              <span>Σχέδιο: Ακανόνιστη Πλάκα & Κυβόλιθος</span>
+              <span>Επιφάνεια: 340 m²</span>
             </div>
           </div>
         </article>
@@ -613,18 +616,75 @@
         <!-- Project 6 -->
         <article class="project-card" data-category="hotels">
           <div class="project-img-box">
-            <img src="assets/project-cobble-corfu-town.jpg" alt="Κυβόλιθος σε Αρχοντικό στην Πόλη της Κέρκυρας" />
-            <span class="project-loc-badge">📍 Πόλη Κέρκυρας (Καντούνι)</span>
+            <img src="assets/project-hotel-kommeno.jpg" alt="Ξενοδοχειακή Πισίνα & Σταμπωτό Δάπεδο στην Κέρκυρα" />
+            <span class="project-loc-badge">📍 Κομμένο & Γουβιά</span>
           </div>
           <div class="project-body">
-            <div class="project-cat">Βίλες & Ιστορικά Κτίρια</div>
-            <h3 class="project-title">Ανάπλαση Εσωτερικής Αυλής Κερκυραϊκού Αρχοντικού</h3>
+            <div class="project-cat">Ξενοδοχεία & Τουριστικά Καταλύματα</div>
+            <h3 class="project-title">Πισίνα Ξενοδοχειακής Μονάδας & Περιμετρική Πλακόστρωση</h3>
             <p class="project-desc">
-              Παραδοσιακό σχέδιο Κυβόλιθου & Βεντάλιας σε γήινους τόνους πέτρας, με σεβασμό στην ιστορική φυσιογνωμία της Κέρκυρας.
+              Κατασκευή κεντρικής πισίνας και παιδικής πισίνας με αντιολισθηρό δάπεδο μεγάλης αντοχής για συνεχή τουριστική χρήση.
             </p>
             <div class="project-meta">
-              <span>Σχέδιο: Κλασικός Κυβόλιθος</span>
-              <span>Επιφάνεια: 115 m²</span>
+              <span>Εφαρμογή: Resort Pool & Patio</span>
+              <span>Επιφάνεια: 520 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 7 -->
+        <article class="project-card" data-category="pools">
+          <div class="project-img-box">
+            <img src="assets/project-wood-sidari.jpg" alt="Πισίνα με Σταμπωτό Deck Ξύλου στο Σιδάρι Κέρκυρας" />
+            <span class="project-loc-badge">📍 Σιδάρι & Αχαράβη</span>
+          </div>
+          <div class="project-body">
+            <div class="project-cat">Πισίνες & Deck</div>
+            <h3 class="project-title">Σύγχρονη Πισίνα με Περιμετρικό Deck Σκούρου Ξύλου</h3>
+            <p class="project-desc">
+              Πολυτελής κατασκευή πισίνας με ψηφίδα και περιβάλλον δάπεδο σε ζεστή απόχρωση ξύλου με Wet-Look προστατευτική σφράγιση.
+            </p>
+            <div class="project-meta">
+              <span>Σχέδιο: Σανίδα Deck</span>
+              <span>Επιφάνεια: 150 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 8 -->
+        <article class="project-card" data-category="villas">
+          <div class="project-img-box">
+            <img src="assets/project-garden-patio.jpg" alt="Σταμπωτό Δάπεδο Κήπου σε Γκρι Πέτρα στην Κέρκυρα" />
+            <span class="project-loc-badge">📍 Κεντρική Κέρκυρα</span>
+          </div>
+          <div class="project-body">
+            <div class="project-cat">Βίλες & Κήποι</div>
+            <h3 class="project-title">Διαμόρφωση Κήπου & Αίθριου με Σταμπωτή Πλάκα Γκρι</h3>
+            <p class="project-desc">
+              Κατασκευή εξωτερικού αίθριου και διακοσμητικού υδάτινου στοιχείου με σταμπωτό δάπεδο σε απόχρωση Γκρι Πέτρας.
+            </p>
+            <div class="project-meta">
+              <span>Σχέδιο: Μεγάλη Πλάκα Σχιστόλιθου</span>
+              <span>Επιφάνεια: 195 m²</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 9 -->
+        <article class="project-card" data-category="hotels">
+          <div class="project-img-box">
+            <img src="assets/project-patiti-interior.jpg" alt="Πατητή Τσιμεντοκονία σε Τουριστική Βίλα στην Κέρκυρα" />
+            <span class="project-loc-badge">📍 Πόλη Κέρκυρας & Κανόνι</span>
+          </div>
+          <div class="project-body">
+            <div class="project-cat">Ειδικές Κατασκευές & Πατητή</div>
+            <h3 class="project-title">Εφαρμογή Πατητής Τσιμεντοκονίας σε Boutique Κατάλυμα</h3>
+            <p class="project-desc">
+              Μονολιθική, 100% αδιάβροχη εφαρμογή πατητής τσιμεντοκονίας σε δάπεδο, τοίχους και χτιστούς νιπτήρες με φυσική μεσογειακή υφή.
+            </p>
+            <div class="project-meta">
+              <span>Εφαρμογή: Πατητή Τσιμεντοκονία</span>
+              <span>Απόχρωση: Άμμος Ιονίου</span>
             </div>
           </div>
         </article>
