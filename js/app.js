@@ -15,14 +15,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const patternData = {
     corfu_slab: {
       name: 'Κερκυραϊκή Πλάκα (Ashlar)',
-      photo: 'assets/project-villa-kassiopi.jpg',
+      photo: 'assets/user-ashlar-corfu-slab.jpg',
       use: 'Ιδανικό για παραδοσιακές αυλές, καντούνια, βεράντες και κλασικές βίλες στην Κέρκυρα.',
       grip: 'Υψηλή Αντιολισθητικότητα (R11)',
       relief: 'Μεσαίο Ανάγλυφο (4mm)',
       style: 'Παραδοσιακό Επτανησιακό'
     },
     cobblestone: {
-      name: 'Κυβόλιθος Κλασικός',
+      name: 'Κυβόλιθος & Πλακόστρωτο',
       photo: 'assets/project-cobble-corfu-town.jpg',
       use: 'Εξαιρετική αντοχή για ράμπες αυτοκινήτων, χώρους στάθμευσης και παραδοσιακά καντούνια.',
       grip: 'Πολύ Υψηλή Πρόσφυση (R12)',
@@ -30,20 +30,20 @@ document.addEventListener('DOMContentLoaded', () => {
       style: 'Διαχρονικό Αρχιτεκτονικό'
     },
     european_fan: {
-      name: 'Ευρωπαϊκή Βεντάλια / Διάδρομος',
-      photo: 'assets/project-ramp-korakiana.jpg',
-      use: 'Αρχοντική επιλογή για ξενοδοχειακές μονάδες, ράμπες και μεγάλους εξωτερικούς διαδρόμους.',
+      name: 'Βοτσαλωτός / Χτενιστός Διάδρομος με Μπορντούρα',
+      photo: 'assets/user-stone-villas-walkway.jpg',
+      use: 'Αρχοντική επιλογή για πετρόχτιστα συγκροτήματα, ξενοδοχειακές μονάδες και εξωτερικούς διαδρόμους.',
       grip: 'Υψηλή Πρόσφυση (R11-R12)',
-      relief: 'Έντονο Ανάγλυφο (5mm)',
-      style: 'Αρχοντικό / Ιστορικό'
+      relief: 'Αντιολισθηρή Υφή (4mm)',
+      style: 'Πετρόχτιστο / Παραδοσιακό'
     },
     random_stone: {
-      name: 'Ακανόνιστη Πέτρα & Deck Πισίνας',
-      photo: 'assets/project-pool-paleokastritsa.jpg',
-      use: 'Φυσική εναρμόνιση με ελαιώνες, κήπους, περιβάλλοντες χώρους πισίνας και εξοχικές κατοικίες.',
+      name: 'Σταμπωτή Πλάκα Πισίνας & Αίθριου',
+      photo: 'assets/user-luxury-villa-pool-pergola.jpg',
+      use: 'Φυσική εναρμόνιση με περιβάλλοντες χώρους πισίνας, πέργκολες, κήπους και πολυτελείς βίλες.',
       grip: 'Φυσική Αντιολισθηρή Υφή (R11)',
       relief: 'Οργανικό Ανάγλυφο (5mm)',
-      style: 'Μεσογειακό Φυσικό'
+      style: 'Μεσογειακό Luxury Resort'
     },
     wood_plank: {
       name: 'Ξύλινη Σανίδα (Deck Πισίνας)',
@@ -54,12 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
       style: 'Resort & Poolside'
     },
     slate_rock: {
-      name: 'Σχιστόλιθος (Slate)',
-      photo: 'assets/project-garden-patio.jpg',
-      use: 'Μοντέρνα minimal αισθητική για σύγχρονες βίλες, αίθρια, κήπους και τουριστικά καταλύματα.',
-      grip: 'Ήπια Αντιολισθηρή Επιφάνεια (R10-R11)',
-      relief: 'Λεπτό Στρωματογενές (3mm)',
-      style: 'Μοντέρνο Minimal'
+      name: 'Αντιολισθηρή Χτενιστή Ράμπα Σκυροδέματος',
+      photo: 'assets/user-brushed-ramp-seaview.jpg',
+      use: 'Μέγιστη πρόσφυση για επικλινείς ράμπες οχημάτων, εισόδους γκαράζ και παραθαλάσσιες ιδιοκτησίες.',
+      grip: 'Μέγιστη Αντιολισθηρή Επιφάνεια (R12)',
+      relief: 'Βαθιές Αυλακώσεις Πρόσφυσης',
+      style: 'Τεχνικό Υψηλής Αντοχής'
     }
   };
 
@@ -79,8 +79,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ionian_sand: {
       name: 'Άμμος Ιονίου',
       hex: '#D4C1A3',
-      tint: 'rgba(212, 193, 163, 0.20)',
-      filter: 'saturate(0.95) brightness(1.05)'
+      tint: 'rgba(212, 193, 163, 0.16)',
+      filter: 'saturate(1.02) brightness(1.03)'
     },
     anthracite: {
       name: 'Ανθρακί Γραφίτης',
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   let currentPattern = 'corfu_slab';
-  let currentColor = 'terracotta';
+  let currentColor = 'ionian_sand';
   let currentGloss = 'satin';
 
   const previewImg = document.getElementById('customizerPreviewImg');
